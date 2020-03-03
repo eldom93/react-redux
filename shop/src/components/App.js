@@ -5,10 +5,11 @@ import VisibleEmailList from '../containers/VisibleEmailList'
 
 const App = () => (
     <div className="App">
+       <h1>Emails</h1>
       <VisibleEmailList/>
       <ArchiveEmail/>
       <Menu />
-     <h1>Inbox</h1>
+    
 
     </div>
   )

@@ -7,7 +7,7 @@ export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER'
 /*
  * other constants
  */
-export const VisibilityFilters = {
+export const VisibilityFilter = {
   SHOW_ALL: 'SHOW_ALL',
   SHOW_ARCHIVED: 'SHOW_ARCHIVED',
   SHOW_ACTIVE: 'SHOW_ACTIVE'
@@ -21,10 +21,11 @@ export const archiveEmail = text => ({
     type: ARCHIVE_EMAIL, text 
 })
 
-export const setVisibilityFilter = filter => ({
-    type: SET_VISIBILITY_FILTER, filter
-})
 
 export const toggleEmail = id => ({
     type: TOGGLE_EMAIL, id 
+})
+
+export const setVisibilityFilter = filter => ({
+    type: SET_VISIBILITY_FILTER, filter
 })

@@ -1,11 +1,12 @@
-
-
+export const ARCHIVE_EMAIL = 'ARCHIVE_EMAIL'
+export const TOGGLE_EMAIL = 'TOGGLE_EMAIL'
+export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER'
 const emails = (state = [], action) => {
     switch (action.type) {
         case SET_VISIBILITY_FILTER:
-            return Object.assign({}, state, {
-                visibilityFilter:action.filter
-            })
+      return Object.assign({}, state, {
+        visibilityFilter: action.filter
+      })
         case ARCHIVE_EMAIL:
             return Object.assign({}, state, {
                 emails: [

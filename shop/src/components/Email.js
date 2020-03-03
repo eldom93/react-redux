@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop0-types'
+import PropTypes from 'prop-types'
 
 const Email = ({onClick, selected, text}) => (
     <li onClick={onClick}

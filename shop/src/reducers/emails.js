@@ -1,5 +1,9 @@
 const emails = (state = [], action) => {
     switch (action.type) {
+        case SET_VISIBILITY_FILTER:
+            return Object.assign({}, state, {
+                visibilityFilter:action.filter
+            })
         case ARCHIVE_EMAIL:
             return Object.assign({}, state, {
                 emails: [

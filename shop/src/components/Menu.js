@@ -5,15 +5,13 @@ import { VisibilityFilters } from '../actions'
 
 
 const Menu = () => (
-    <nav>
+    <div>
         <span>Show:</span>
-
         <FilterLink filter={VisibilityFilters.SHOW_ALL}>Inbox</FilterLink>
         <FilterLink filter={VisibilityFilters.SHOW_ARCHIVED}>Archive</FilterLink>
-        <FilterLink filter={VisibilityFilters.SHOW_DELETED}>Trash</FilterLink>
-        
-    </nav>
-    
+        <FilterLink filter={VisibilityFilters.SHOW_ACTIVE}>Selected</FilterLink>
+    </div>
+
 )
 
 export default Menu

@@ -1,26 +1,30 @@
+/*
+ * action types
+ */
+export const ARCHIVE_EMAIL = 'ARCHIVE_EMAIL'
+export const TOGGLE_EMAIL = 'TOGGLE_EMAIL'
+export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER'
+/*
+ * other constants
+ */
+export const VisibilityFilters = {
+  SHOW_ALL: 'SHOW_ALL',
+  SHOW_ARCHIVED: 'SHOW_ARCHIVED',
+  SHOW_ACTIVE: 'SHOW_ACTIVE'
+}
+/*
+ * action creators
+ */
+
+
 export const archiveEmail = text => ({
-    text
+    type: ARCHIVE_EMAIL, text 
 })
 
 export const setVisibilityFilter = filter => ({
-    filter
+    type: SET_VISIBILITY_FILTER, filter
 })
 
 export const toggleEmail = id => ({
-    id
+    type: TOGGLE_EMAIL, id 
 })
-
-export const VisibilityFilters = {
-    VisibilityFilters: 'SHOW_ALL',
-    emails: [
-        {
-            text: 'The currently selected visibility filter.',
-            selected: true
-        },
-        {
-            text: 'Youll often find that you need to store some data, as well as some UI state, in the state tree. This is fine, but try to keep the data separate from the UI state.',
-            selected: false
-        }
-
-    ]
-}

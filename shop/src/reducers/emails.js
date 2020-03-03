@@ -18,7 +18,7 @@ const emails = (state = [], action) => {
             return Object.assign({}, state, {
                 emails: state.emails.map((email, index) => {
                     if(index === action.index) {
-                        return Object.assign({}, todo, {selected: !email.selected
+                        return Object.assign({}, email, {selected: !email.selected
                         })
                     }
                     return email

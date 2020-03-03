@@ -17,7 +17,7 @@ const getVisibleEmails = (emails, filter) => {
 }
 
 const mapStateToProps = state => ({
-    emails: getVisibleEmails(state.emails, state.VisibilityFilters)
+    emails: getVisibleEmails(state.emails, state.VisibilityFilter)
 })
 
 const mapDispatchToProps = dispatch => ({

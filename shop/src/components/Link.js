@@ -10,7 +10,7 @@ disabled={active}>{children}</button>
 
 Link.propTypes = {
     active: PropTypes.bool.isRequired,
-    children: PropTypes.string.isRequired,
+    children: PropTypes.any.isRequired,
     onClick: PropTypes.func.isRequired
 }
 

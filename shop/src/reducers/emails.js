@@ -10,7 +10,7 @@ const emails = (state = [], action) => {
         case ARCHIVE_EMAIL:
             return Object.assign({}, state, {
                 emails: [
-                    ...state.emails,
+                    {...state.emails},
                     {
                         text:action.text,
                         selected: false

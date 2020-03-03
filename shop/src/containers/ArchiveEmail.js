@@ -7,9 +7,9 @@ const ArchiveEmail = ({ dispatch }) => {
     return (
         <div>
             <form onSubmit={e => {
-                e.preventDefault()
+                e.preventDefault();
             if(!input.value.trim()){
-            return
+            return dispatch(archiveEmail(input.value))
         }
         dispatch(archiveEmail(input.value))
         input.value = ''}}>
@@ -22,4 +22,4 @@ const ArchiveEmail = ({ dispatch }) => {
     )
 }
 
-export default ArchiveEmail
+export default connect()(ArchiveEmail)

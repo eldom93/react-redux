@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const Email = ({onClick, selected, text}) => (
     <li onClick={onClick}
-    style={{display: selected ? 'none' : 'block'}}>
+    style={{display: selected ? 'block' : 'none'}}>
         {text}
     </li>
        

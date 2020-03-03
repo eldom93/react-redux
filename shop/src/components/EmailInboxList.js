@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import Email from './Email'
 const EmailInboxList = ({emails, toggleEmail}) => (
     <ul>
-        {React.Children.map(emails => (
-            <Email key={emails.id} onClick={toggleEmail(emails.id)} />
+        {React.Children.map(email => (
+            <Email key={email.id} {...email} onClick={toggleEmail(email.id)} />
         ))}
     </ul>
        

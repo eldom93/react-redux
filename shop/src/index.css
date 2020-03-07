@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin-right:0px;
 }
 
 code {
@@ -14,24 +15,71 @@ code {
 
 
 h1{
-  display: inline-block;
+  display: inline;
   float:left;
-  width:20vw;
+  width:33vw;
+  text-align: center;
 }
 
 form{
-  display: inline-block;
-float:center;
-  width:70vw;
+  display: inline;
+float:right;
+  width:50vw;
   margin-top: 25px;
   margin-bottom:50px;
 }
 
 .menu button {
   display: block;
-  
+
   padding:25px;
   background-color:transparent;
-  padding-left:50px;
-  padding-right:50px;
+padding-left:50px;
+padding-right:50px;
+  width:33vw;
+
+}
+.menu{
+  display:inline-block;
+  clear: both;
+  margin-right:0px;
+  float:left;
+  margin-bottom:100%;
+}
+ section{
+   display:inline-block;
+  float:right;
+  background-color:lightblue;
+  width:100px;
+  height:auto;
+  text-align:right;
+}
+button.archive{
+  height:44px;
+  border-radius:25px;
+  width:100px;
+  display:inline-block;
+  float:right;
+}
+input {
+  height: 44px;
+  width: 33vw;
+  margin-right: 5vw;
+  border-radius: 5px solid transparent;
+}
+body{
+  display:inline-block;
+}
+
+div#div {
+  display: inline-block;
+  float: right;
+}
+
+h5{
+  float:right !important;
+  background-color:lightblue;
+  width:40%;
+  padding:25px;
+  margin:0px;
 }

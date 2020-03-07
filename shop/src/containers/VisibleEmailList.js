@@ -12,7 +12,7 @@ const getVisibleEmails = (emails, filter) => {
         case VisibilityFilter.SHOW_ACTIVE:
             return emails.filter(t => !t.selected)
         default:
-           return 'error'
+           return ''
     }
 }
 

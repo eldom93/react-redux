@@ -7,7 +7,7 @@ const ArchiveEmail = ({ dispatch }) => {
 
   return (
     <div id="div">
-        <div id="div1"></div>
+   
       <form
         onSubmit={e => {
           e.preventDefault();

@@ -1,46 +1,38 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { archiveEmail } from '../actions'
+import React from "react";
+import { connect } from "react-redux";
+import { archiveEmail } from "../actions";
 
 const ArchiveEmail = ({ dispatch }) => {
-    let input
-    let temp1
-    return (
-        <div id="div">
-            <form onSubmit={e => {
-                e.preventDefault();
-            if(!input.value.trim()){
-            return 
-        }
-       // temp1 += dispatch(archiveEmail(input.value));
-       // document.getElementById('li').innerHTML = temp1[temp1.length -1];
-      //  {console.log(temp1[temp1.length -1])}
-       
-     dispatch(archiveEmail(input.value));
-     {console.log(temp1=input.value)}
-     temp1=input.value;
-   
+  let input;
 
-     var newDiv = document.createElement("div"); 
-  // and give it some content 
-  var newContent = document.createTextNode(input.value); 
-  // add the text node to the newly created div
-  newDiv.appendChild(newContent);  
+  return (
+    <div id="div">
+      <form
+        onSubmit={e => {
+          e.preventDefault();
+          if (!input.value.trim()) {
+            return;
+          }
 
-  // add the newly created element and its content into the DOM 
-  var currentDiv = document.getElementById("div1"); 
-  document.body.insertBefore(newDiv, currentDiv); 
+          dispatch(archiveEmail(input.value));
 
-     
-    
-   input.value = ''}}>
-   <input ref={node => (input = node)} />
-<button type="submit" >Archive Email</button>
+          var newDiv = document.createElement("div");
 
-    
-      
-    </form></div>
-    )
-}
+          var newContent = document.createTextNode(input.value);
 
-export default connect()(ArchiveEmail)
+          newDiv.appendChild(newContent);
+
+          var currentDiv = document.getElementById("div1");
+          document.body.insertBefore(newDiv, currentDiv);
+
+          input.value = "";
+        }}
+      >
+        <input ref={node => (input = node)} />
+        <button type="submit">Archive Email</button>
+      </form>
+    </div>
+  );
+};
+
+export default connect()(ArchiveEmail);

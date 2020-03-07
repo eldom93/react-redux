@@ -5,12 +5,15 @@ import VisibleEmailList from '../containers/VisibleEmailList'
 
 
 const App = () => (
+ 
     <div id="app">
+      <div id="hamburger-menu">X</div>
        <h1>Emails</h1>
       <VisibleEmailList/>
       <ArchiveEmail/>
       <Menu />
-
+   
+  
 {console.log({...ArchiveEmail})}
     </div>
   )

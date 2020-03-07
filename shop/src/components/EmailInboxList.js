@@ -1,24 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Email from './Email'
-const EmailInboxList = ({emails, toggleEmail}) => (
+//import Email from './Email'
+const EmailInboxList = ({emails}) => (
     <ul>
-        {React.Children.map(emails => (
-            <Email key={emails.id} {...emails} onClick={toggleEmail(emails.id)} />
-        ))}
+       <li> {emails}</li>
     </ul>
        
 )
 
 EmailInboxList.propTypes = {
-   emails: PropTypes.arrayOf(
-       PropTypes.shape({
-           id: PropTypes.number.isRequired,
-           selected: PropTypes.bool.isRequired,
-           text: PropTypes.string.isRequired
-       }).isRequired
-   ).isRequired,
-   toggleEmail: PropTypes.func.isRequired
+   emails: PropTypes.arrayOf({})
 }
 
 export default EmailInboxList

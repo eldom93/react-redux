@@ -8,7 +8,7 @@ const getVisibleEmails = (emails, filter) => {
         case VisibilityFilter.SHOW_ALL:
             return emails
         case VisibilityFilter.SHOW_ARCHIVED:
-            return emails.filter(t => t.selected)
+            return emails
         case VisibilityFilter.SHOW_ACTIVE:
             return emails.filter(t => !t.selected)
         default:

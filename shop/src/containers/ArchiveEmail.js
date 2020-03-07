@@ -37,8 +37,7 @@ const ArchiveEmail = ({ dispatch }) => {
         <button class="archive" type="submit">Archive Email</button>
       </form>
       <ul id="myList">
-  <li>Coffee</li>
-  <li>Tea</li>
+
 </ul>
     </div>
   );

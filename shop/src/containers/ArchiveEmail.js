@@ -34,10 +34,10 @@ const ArchiveEmail = ({ dispatch }) => {
      
     
    input.value = ''}}>
+   <input ref={node => (input = node)} />
 <button type="submit" >Archive Email</button>
 
     
-<input ref={node => (input = node)} />
       
     </form></div>
     )

@@ -16,7 +16,7 @@ code {
 
 h1{
   display: inline-block;
-  float:center;
+  float:left;
   width:33vw;
   text-align: center;
   color:rgba(0,0,0,.68);
@@ -42,6 +42,8 @@ padding-right:50px;
   font-weight:600;
   color:rgba(0,0,0,.68);
   border:1px solid #d8d8d8;
+ 
+
 }
 .menu{
   display:inline-block;
@@ -67,19 +69,9 @@ button.archive{
   background-color: blue;
   color:#ffffff;
   font-weight:600;
+  margin-right:25px; 
 }
-input {
-  height: 44px;
-  width: 30vw;
-  margin-right: 5vw;
-  border-radius: 5px solid transparent;
-  font-size:16px;
-  font-family:Arial, Helvetica, sans-serif;
-  font-weight:600;
-  color:rgba(0,0,0,.34);
-  padding:.1rem;
-  text-transform: capitalize;
-}
+
 body{
   display:inline-block;
 }
@@ -106,6 +98,7 @@ li{
   display: block;
   text-align: left;
   border:2px solid #ffffff;
+
 }
 
 #hamburger-menu{
@@ -122,6 +115,7 @@ li{
   margin-top:25px;
   margin-left:25px;
   display: inline-block;
+  visibility: hidden;
 }
 
 #hamburger-menu:hover{
@@ -141,4 +135,39 @@ background:lightblue;
 ul li{
   display: block;
   text-align: left;
+  margin-right:25px;
 }
+
+input {
+  height: 44px;
+  width: 30vw;
+  margin-right: 20px;
+  border-radius: 5px solid transparent;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  color: rgba(0,0,0,.34);
+  padding: .1rem;
+  text-transform: capitalize;
+  float: left;
+}
+
+span {
+  background-color: lightgreen;
+  border-radius: 25px;
+  position: fixed;
+  z-index: 1;
+  display: inline;
+  width: 44px;
+  height: 44px;
+  margin-left: 15px;
+  margin-top: -34px;
+  float: right;
+  color: #ffffff;
+  text-align: center;
+  margin-left: 75px;
+  padding: 2px;
+  font-size: 18px;
+  padding: initial;
+}
+

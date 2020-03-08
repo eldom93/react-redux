@@ -12,7 +12,6 @@ const App = () => (
       <VisibleEmailList/>
       <ArchiveEmail/>
       <Menu />
-   <h1>hi fardousa</h1>
   
 {console.log({...ArchiveEmail})}
     </div>

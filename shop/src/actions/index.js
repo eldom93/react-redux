@@ -1,29 +1,44 @@
 /*
  * action types
  */
-export const ARCHIVE_EMAIL = 'ARCHIVE_EMAIL'
-export const TOGGLE_EMAIL = 'TOGGLE_EMAIL'
+export const COMPOSE_MAIL = 'COMPOSE_MAIL'
+export const SAVE_TO_DRAFTS = 'SAVE_TO_DRAFTS'
+export const DELETE_MAIL = 'DELETE_MAIL'
+export const SEND_MAIL = 'SEND_MAIL'
+export const TOGGLE_MAIL = 'TOGGLE_MAIL'
 export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER'
 /*
  * other constants
  */
 export const VisibilityFilter = {
-  SHOW_ALL: 'SHOW_ALL',
-  SHOW_ARCHIVED: 'SHOW_ARCHIVED',
-  SHOW_ACTIVE: 'SHOW_ACTIVE'
+  SHOW_INBOX: 'SHOW_INBOX',
+  SHOW_SENT_MAILS: 'SHOW_SENT_MAILS',
+  SHOW_DRAFTS: 'SHOW_DRAFTS',
+  SHOW_TRASH:'SHOW_TRASH'
 }
 /*
  * action creators
  */
 
 
-export const archiveEmail = text => ({
-    type: ARCHIVE_EMAIL, text 
+export const composeMail = compose => ({
+    type: COMPOSE_MAIL, compose
 })
 
+export const deleteMail = id => ({
+    type: DELETE_MAIL, id 
+})
+
+export const sendMail = text => ({
+    type: SEND_MAIL, text 
+})
+
+export const saveToDrafts = text => ({
+    type: SAVE_TO_DRAFTS, text 
+})
 
 export const toggleEmail = id => ({
-    type: TOGGLE_EMAIL, id 
+    type: TOGGLE_MAIL, id 
 })
 
 export const setVisibilityFilter = filter => ({

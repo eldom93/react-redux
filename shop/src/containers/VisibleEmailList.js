@@ -1,30 +1,32 @@
 import { connect } from 'react-redux'
-import { toggleEmail } from '../actions'
-import EmailInboxList from '../components/EmailInboxList'
+import { composeMail } from '../actions'
+import MailList from '../components/MailList'
 import { VisibilityFilter } from '../actions'
 
-const getVisibleEmails = (emails, filter) => {
+const getVisibleEmails = (mails, filter) => {
     switch(filter) {
-        case VisibilityFilter.SHOW_ALL:
-            return emails
-        case VisibilityFilter.SHOW_ARCHIVED:
-            return emails.filter(t => t.selected)
-        case VisibilityFilter.SHOW_ACTIVE:
-            return emails.filter(t => !t.selected)
+        case VisibilityFilter.SHOW_INBOX:
+            return mails
+        case VisibilityFilter.SHOW_SENT_MAILS:
+            return mails.filter(t => !t.sent)
+        case VisibilityFilter.SHOW_DRAFTS:
+            return state
+        case VisibilityFilter.SHOW_TRASH:
+            return mails.filter(t => t.trash)
         default:
            return ''
     }
 }
 
 const mapStateToProps = state => ({
-    emails: getVisibleEmails(state.emails, state.VisibilityFilter)
+    mails: getVisibleEmails(state.mails, state.VisibilityFilter)
 })
 
 const mapDispatchToProps = dispatch => ({
-    toggleEmail: id => dispatch(toggleEmail(id))
+    composeMail: compose => dispatch(composeMail(compose))
 })
 
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(EmailInboxList)
+)(MailList)

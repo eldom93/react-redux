@@ -5,6 +5,7 @@ import Folders from '../components/Folders'
 import MailList from '../components/MailList'
 import Mail from '../components/Mail'
 import ComposeMail from '../components/ComposeMail'
+import Email from './index'
 //containers for connecting redux to react and then import action then call dispatch 
 //inside container and calling action with passed value
 

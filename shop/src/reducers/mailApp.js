@@ -1,19 +1,18 @@
-import { COMPOSE_MAIL, VisibilityFilter, SET_VISIBILITY_FILTER } from "../actions"
+import { COMPOSE_MAIL, SET_VISIBILITY_FILTER } from "../actions"
 //import { COMPOSE_MAIL, VisibilityFilter, SET_VISIBILITY_FILTER } from "../actions"
 //let initialState =  {type: COMPOSE_MAIL, compose:false};
 
 
-function mailApp(state = [], action) {
+const mailApp = (state = [], action) => {
     switch (action.type) {
         case SET_VISIBILITY_FILTER:
             return Object.assign({}, state, {
-                VisibilityFilter: action.filter
+                visibilityFilter: action.filter
             })
         case COMPOSE_MAIL:
             return Object.assign({}, state, {
                 mails: [{
                     index: 5,
-                    mail:'dfadfads',
                     compose: true
                 }]
             })

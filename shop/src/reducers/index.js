@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-import composeMail from './composeMail'
+import mailApp from './mailApp'
 import visibilityFilter from './VisibilityFilter'
 
 export default combineReducers({
-    composeMail,
+    mailApp,
     visibilityFilter
 })

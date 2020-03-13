@@ -9,15 +9,11 @@ import ComposeMail from '../components/ComposeMail'
 //inside container and calling action with passed value
 
 const App = ({dispatch}) => (
-
   <div id="app">
     <div className="row">
-      <button onClick={e => {
-          e.preventDefault();
-       dispatch(composeMail(true))}}>aaaaaaa</button>
       <ComposeMail onClick={e => {
-          e.preventDefault();  {console.log(dispatch(composeMail()))} dispatch(composeMail(true))}} />
-     
+          e.preventDefault(); dispatch(composeMail(true))}} />
+     {console.log(dispatch(composeMail(true)))}
       <Folders />
       <MailList />
       <Mail />

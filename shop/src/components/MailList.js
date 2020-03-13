@@ -1,13 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Mail from './Mail'
-const MailList = ({mails, onMailClick }) => (
-
-<ul id="mail-list" className="col">
-    {mails.map((mail, index) => (
-        <Mail key={index} {...mail} onClick={() => onMailClick(index)}/>
- ))} </ul>
-
+const MailList = ({text, onClick }) => (
+        <Mail key={5} {...text} onClick={() => onClick(5)}/>
 )
 
 MailList.propTypes = {
@@ -18,7 +13,7 @@ MailList.propTypes = {
         text: PropTypes.string.isRequired
       }).isRequired
     ).isRequired,
-    onMailClick: PropTypes.func.isRequired
+    onClick: PropTypes.func.isRequired
   }
   
 export default MailList;

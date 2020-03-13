@@ -2,11 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const ComposeMail = ({ onClick, compose }) => (
-  <li
+  <li className="compose-mail"
     onClick={onClick}
-    style={{
-      display: compose ? 'none' : 'block'
-    }}>+++
+    style={{display: compose ? 'none' : 'block'
+    }}>+
   </li>
 )
 

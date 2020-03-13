@@ -10,9 +10,10 @@ import ComposeMail from '../components/ComposeMail'
 
 const App = ({dispatch}) => (
   <div id="app">
-    <div className="row">
-      <ComposeMail onClick={e => {
+          <ComposeMail onClick={e => {
           e.preventDefault(); dispatch(composeMail(true))}} />
+    <div className="row">
+
      {console.log(dispatch(composeMail(true)))}
       <Folders />
       <MailList />

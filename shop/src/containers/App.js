@@ -1,4 +1,41 @@
 import React, { Component } from 'react'
+import ComposeMail from '../components/ComposeMail'
+
+class App extends Component {
+  render(){
+    return(
+      <div id="App">
+        <h1>Mail</h1>
+        <ComposeMail/>
+      </div>
+    )
+  }
+}
+
+export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*import React, { Component } from 'react'
 
 import { connect } from 'react-redux'
 
@@ -71,11 +108,21 @@ export default class App extends Component {
   render() {
     return (
       <div >
-        <h4>Emails</h4>
+        <div className="col">
+          <Folders/>
+        </div>
+        <div className="col">
         <ul id="my"></ul>
+        </div>
+        <div className="col">
+        <Mail/>
+        </div>
+   
+  
+     
       </div>
     )
   }
 };
-
+*/
 

@@ -1,24 +1,12 @@
 import React from "react";
+import { connect } from 'react-redux'
 
 class Email extends React.Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            toggleNewMail:true
-        }
-        this.composeNewMail = this.composeNewMail.bind(this);
-    }
-
-    composeNewMail() {
-        this.setState({
-            toggleNewMail: !this.state.toggleNewMail,
-          });
-     
-    }
   render() {
+    console.log(this.props);
     return (
       <ul>
-        <li className="compose"style={{ display: this.state.toggleNewMail ? 'block' : 'none'}}>
+        <li className="compose" style={{ display: this.state.toggleNewMail ? 'block' : 'none'}}>
             <button onClick={this.composeNewMail}>Send</button><br/><br/>
             <label>To:</label>
             <br/>   <br/>
@@ -46,4 +34,10 @@ class Email extends React.Component {
     );
   }
 }
-export default Email;
+
+const mapStateToProps = (state) => {
+  return {
+    emails: state.emails, sent
+  }
+}
+export default connect(mapStateToProps)(Email);

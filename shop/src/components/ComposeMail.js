@@ -1,18 +1,25 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, { Component } from 'react'
+//import { composeMail } from '../actions/index'
+import { connect } from 'react-redux'
 
-const ComposeMail = ({ onClick, compose }) => (
-  <li className="compose-mail"
-    onClick={onClick}
-    style={{display: compose ? 'none' : 'block'
-    }}>+
-  </li>
-)
 
-ComposeMail.propTypes = {
-  onClick: PropTypes.func.isRequired,
-  compose: PropTypes.bool.isRequired
+class ComposeMail extends Component {
+  handleClick = () => {
+    this.props.composeMail(true)
+  }
+  render(){
+    console.log(this.props);
+    return(
+    <li className="compose-mail" onClick={this.handleClick}>+
+    </li>
+    )
+  }
 }
 
+const mapDispatchToProps = (dispatch) => {
+  return {
+    composeMail: (sent) => { dispatch({type: 'COMPOSE_MAIL', sent: sent }) }
+  }
+}
 
-export default ComposeMail;
+export default connect(null, mapDispatchToProps)(ComposeMail);

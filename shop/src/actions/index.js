@@ -31,8 +31,8 @@ export const VisibilityFilter = {
  */
 
 
-export const composeMail = compose => ({
-    type: COMPOSE_MAIL, compose
+export const composeMail = sent => ({
+    type: COMPOSE_MAIL, sent
 })
 
 export const deleteMail = id => ({

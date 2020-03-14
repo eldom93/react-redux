@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import ComposeMail from '../components/ComposeMail'
-
+import Email from './index'
 class App extends Component {
   render(){
     return(
       <div id="App">
         <h1>Mail</h1>
         <ComposeMail/>
+        <Email/>
       </div>
     )
   }

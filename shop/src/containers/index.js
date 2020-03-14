@@ -1,13 +1,29 @@
 import React from "react";
 import { connect } from 'react-redux'
-
+let text;
 class Email extends React.Component {
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    text = e.target.value;
+    this.props.sendMail(text, true);
+  }
+  handleChange = (e) => {
+    e.preventDefault();
+    text = e.target.value;
+    console.log(text);
+
+  }
   render() {
-    console.log(this.props);
+   
+    this.ref = React.createRef();
+ 
+    this.handleChange = this.handleChange.bind(this);
+  this.handleSubmit = this.handleSubmit.bind(this);
+ 
     return (
-      <ul>
-        <li className="compose" style={{ display: this.state.toggleNewMail ? 'block' : 'none'}}>
-            <button onClick={this.composeNewMail}>Send</button><br/><br/>
+        <form onSubmit={this.handleSubmit} className="compose" style={{ display: this.props.emails.sent ? 'block' : 'none'}}>
+            <button type="Submit">Send</button><br/><br/>
             <label>To:</label>
             <br/>   <br/>
             <input className="input" type="text"></input>
@@ -26,18 +42,22 @@ class Email extends React.Component {
             <br/>   <br/>
             <label>Body:</label>
             <br/>   <br/>
-            <input className="input-body" type="text"></input>
+            <input onChange={e => this.handleChange(e)} ref={(input) => this.input = input} className="input-body" type="text"></input>
             <br/>   <br/>
-            </li>
-            <li>{this.state.toggleNewMail}</li>
-      </ul>
+            </form>
     );
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, sent) => {
   return {
-    emails: state.emails, sent
+    emails: () => state.emails, sent
   }
 }
-export default connect(mapStateToProps)(Email);
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    sendMail: (text, sent) => { dispatch({type: 'SEND_MAIL', text: text, sent: sent }) }
+  }
+}
+export default connect(mapStateToProps,mapDispatchToProps)(Email);

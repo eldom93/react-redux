@@ -32,7 +32,7 @@ ul li{
   border:2px solid #d8d8d8;
   height: 44px;
   width:33vw;
-  text-align:center;
+  text-align:left;
   padding-top:25px;
   list-style: none;
   text-decoration:none;
@@ -113,4 +113,25 @@ button {
   font-size: 14px;
   color:#ffffff;
   font-weight:600;
+}
+
+h1{
+  display:inline-block;
+}
+ul#my li {
+  width: 70vw;
+  display: block;
+  float: right;
+}
+
+
+ul#my span {
+  width: 18vw;
+  display: block;
+  float: left;
+  padding-top: 25px;
+  border: 2px solid #d8d8d8;
+  padding-bottom: 26px;
+  margin-left: 73px;
+  text-align: center;
 }

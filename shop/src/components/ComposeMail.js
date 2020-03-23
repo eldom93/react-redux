@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-fjlsdfjdkslaf
+
 
 class ComposeMail extends Component {
   handleClick = () => {
-    this.props.composeMail(this.props.emails, true, this.props.text)
+ 
+    this.props.composeMail(this.props.emails, true, this.props.text);
+ 
   }
   render(){
-    console.log(this.props);
+
     const compose = this.props.emails ? (
       <span onClick={this.handleClick}>+
       </span> 

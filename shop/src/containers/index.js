@@ -22,7 +22,7 @@ class Email extends React.Component {
   this.handleSubmit = this.handleSubmit.bind(this);
  
     return (
-        <form onSubmit={this.handleSubmit} className="compose" style={{ display: this.props.emails.sent ? 'block' : 'none'}}>
+        <form onSubmit={this.handleSubmit} className="compose" style={{ display: this.props.emails.sent ? 'none' : 'block'}}>
             <button type="Submit">Send</button><br/><br/>
             <label>To:</label>
             <br/>   <br/>

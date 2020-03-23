@@ -11,7 +11,8 @@ const store = createStore(
     applyMiddleware(thunk)
   );
   store.subscribe(() => {
-    console.log(store.getState().sent);
+console.log(store.getState());
+  store.getState();
   });
   
 render(

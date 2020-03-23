@@ -1,3 +1,5 @@
+import { COMPOSE_MAIL, SEND_MAIL} from "../actions"
+import ComposeMail from '../components/ComposeMail'
 const initialState = {
     emails: [],
     sent: false,
@@ -7,7 +9,7 @@ const initialState = {
 
 const rootReducer = (state = initialState, action) => {
 
-    if(action.type === 'COMPOSE_MAIL'){
+    if(action.type === COMPOSE_MAIL){
         return {
             ...state, 
             emails: [...state.emails],
@@ -15,7 +17,7 @@ const rootReducer = (state = initialState, action) => {
             text: [...state.text]
         }
     }
-    if(action.type === 'SEND_MAIL'){
+    if(action.type === SEND_MAIL){
         return {
             ...state, 
             emails: [...state.emails, {sent: false}],
@@ -23,7 +25,7 @@ const rootReducer = (state = initialState, action) => {
             text: [...state.text]
         }
     }
-
+console.log(state)
 }
 
 export default rootReducer;
